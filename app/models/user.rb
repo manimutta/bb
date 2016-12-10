@@ -7,14 +7,5 @@ class User < ActiveRecord::Base
   has_many :orders
   has_one :role
   has_many :cart_items
-  after_create :set_roles
 
-
-  def has_role(role)
-    self.roles.pluck(:name).include? role
-  end
-
-  def set_roles
-    User.create(user_id: self.id, role_id: Role.where(name: "Customer").first.id)
-  end
 end
