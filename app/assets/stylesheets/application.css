@@ -15,6 +15,6 @@
  *= require bootstrap-material-design.min
  *= require font-awesome
  *= ripples.min
- *= require style.
+ *= require style
  *= require_self
  */
